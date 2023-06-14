@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="./css/styles.css" />
+    <title>Event site</title>
+  </head>
+  <body>
+    <div class="tabs">
+      <button class="tab-button active" onclick="showCategory('music')">Music</button>
+      <button class="tab-button" onclick="showCategory('sports')">Sports</button>
+      <button class="tab-button" onclick="showCategory('business')">Business</button>
+      <button class="tab-button" onclick="showCategory('food')">Food</button>
+      <button class="tab-button" onclick="showCategory('art')">Art</button>
+    </div>
+
+    <div id="events-grid" class="events-grid">
+    
+    </div>
+
+    <script type="module" src="./js/app.js"></script>
+  </body>
+</html>
