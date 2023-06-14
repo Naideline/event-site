@@ -59,3 +59,12 @@ body{
     color: black;
   }
 
+  .events-details {
+    color: rgba(165, 23, 23, 0.842);
+    font-weight: 400;
+    font-size: 17px;
+  }
+
+  .event div {
+    padding: 5px;
+  }

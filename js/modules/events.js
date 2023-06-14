@@ -22,7 +22,7 @@ export async function showCategory(category) {
       eventDiv.appendChild(title);
 
       const date = document.createElement("div");
-      date.className = "event-details";
+      date.className = "events-details";
       date.textContent = formatDate(event.date);
       eventDiv.appendChild(date);
 
