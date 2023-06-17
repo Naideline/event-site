@@ -22,8 +22,6 @@ body {
   margin-top: 5px;
 }
 
-<<<<<<< Updated upstream
-=======
 .events-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -74,4 +72,3 @@ div.event {
 .event div {
   padding: 5px;
 }
->>>>>>> Stashed changes
