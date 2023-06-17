@@ -1,5 +1,5 @@
-import cache from "../cache/cache.js";
-import { formatPrice, formatDate } from "../modules/helpers.js";
+import cache from "../api/api.js";
+import { formatPrice, formatDate } from "../modules/config.js";
 
 export async function showCategory(category) {
   const eventsGrid = document.getElementById("events-grid");
@@ -22,13 +22,13 @@ export async function showCategory(category) {
       eventDiv.appendChild(title);
 
       const date = document.createElement("div");
-      date.className = "events-details";
+      date.className = "event-details";
       date.textContent = formatDate(event.date);
       eventDiv.appendChild(date);
 
       const location = document.createElement("div");
       location.className = "event-details";
-      location.textContent = `${event.location.city} • ${event.location.state}, ${event.location.address}`;
+      location.textContent = `${event.location.address} • ${event.location.city}, ${event.location.state}`;
       eventDiv.appendChild(location);
 
       const price = document.createElement("div");
