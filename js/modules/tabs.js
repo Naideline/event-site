@@ -1,4 +1,4 @@
-import { showCategory } from '../cache/events.js';
+import { showCategory } from '../cache/eventsTabs.js';
 
 export function createTabs() {
   const tabsContainer = document.querySelector('.tabs');
