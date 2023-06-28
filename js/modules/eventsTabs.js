@@ -1,5 +1,6 @@
-import cache from "../api/api.js";
-import { formatPrice, formatDate } from "../modules/config.js";
+import cache from "../proxy/proxy.js";
+import { formatPrice } from "../utils/formatPrice.js";
+import { formatDate } from "../utils/formatDate.js";
 
 export async function showCategory(category) {
   const eventsGrid = document.getElementById("events-grid");
@@ -21,16 +22,18 @@ export async function showCategory(category) {
       eventsGrid.appendChild(eventDiv);
     });
   } catch (error) {
-    console.error("Error retrieving events:", error);
+    
   }
 
   const tabButtons = document.getElementsByClassName("tab-button");
   for (let i = 0; i < tabButtons.length; i++) {
     tabButtons[i].classList.remove("active");
   }
-  document
-    .querySelector(`.tab-button[data-category="${category}"]`)
-    .classList.add("active");
+  
+  const tabButton = document.querySelector(`.tab-button[data-category="${category}"]`);
+  if (tabButton) {
+    tabButton.classList.add("active");
+  }
 }
 
-window.showCategory = showCategory;
+

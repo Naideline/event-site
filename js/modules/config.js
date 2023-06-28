@@ -1,20 +1,16 @@
-export function formatPrice(price) {
-    if (price === 0) {
-      return "Free";
-    } else {
-      return "$" + price.toFixed(2);
-    }
-  }
-  
-  export function formatDate(timestamp) {
-    const date = new Date(timestamp);
-    const options = {
-      weekday: "long",
-      month: "long",
-      day: "numeric",
-      hour: "numeric",
-      minute: "numeric",
-    };
-    return date.toLocaleDateString("en-US", options);
-  }
-  
+import { showCategory } from './eventsTabs.js';
+
+export function createTabs() {
+  const tabsContainer = document.querySelector('.tabs');
+  const categories = ['music', 'sports', 'business', 'food', 'art'];
+
+  categories.forEach(function(category) {
+    const button = document.createElement('button');
+    button.className = 'tab-button';
+    button.id = `tab-${category}`; 
+    button.textContent = category.charAt(0).toUpperCase() + category.slice(1);
+    button.addEventListener('click', () => showCategory(category));
+    tabsContainer.appendChild(button);
+  });
+}
+
