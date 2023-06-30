@@ -3,7 +3,7 @@ import { formatPrice } from "../utils/formatPrice.js";
 import { formatDate } from "../utils/formatDate.js";
 import { isEventFavorite } from "../modules/favorites.js";
 import { isEventInterested, toggleInterested } from "../modules/interested.js";
-import {isEventGoing} from "../modules/going.js"
+import {isEventGoing, toggleGoing} from "../modules/going.js"
 import { setActiveTabButton } from "../modules/tabButton.js";
 import { toggleFavorite } from "../modules/favorites.js";
 
