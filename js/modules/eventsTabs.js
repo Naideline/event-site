@@ -1,10 +1,9 @@
 import cache from "../proxy/proxy.js";
 import { formatPrice } from "../utils/formatPrice.js";
 import { formatDate } from "../utils/formatDate.js";
-import { isEventFavorite } from "../modules/favorites.js";
+import { isEventFavorite, toggleFavorite } from "../modules/favorites.js";
 import { isEventInterested, toggleInterested,isEventGoing, toggleGoing } from "../modules/interestedAndGoing.js";
 import { setActiveTabButton } from "../modules/tabButton.js";
-import { toggleFavorite } from "../modules/favorites.js";
 
 export async function showCategory(category) {
   const eventsGrid = document.getElementById("events-grid");
